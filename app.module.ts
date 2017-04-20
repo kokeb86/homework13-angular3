@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { studentComponent } from './student.component';
+import {AboutusComponent} from './aboutus.component';
 import { studentDetail } from './studentdetail.component';
 import { HomeComponent } from './home.component';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import {ProfileGuard} from "./profile.guard";
     AppComponent,
     studentComponent,
     HomeComponent,
+    AboutusComponent,
     studentDetail,
     Error404Component
   ],

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { Subscription } from "rxjs";
 import { DataService } from './db.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-route',
@@ -14,7 +15,7 @@ import { DataService } from './db.service';
     <P>Student Id: {{student.id}}<p>
       <P>Student First Name: {{student.name}}<p>
       <P>Student email: {{student.email}}<p>
-
+<button (click)="onNavigate()">Go Home</button>
     </div>
   `
 })
@@ -24,7 +25,7 @@ export class studentDetail {
   id: string;
 
 
-  constructor(private activatedRoute: ActivatedRoute,private dataService: DataService) {
+  constructor(private router: Router,private activatedRoute: ActivatedRoute,private dataService: DataService) {
     this.subscription = activatedRoute.params.subscribe(
         (param: any) => this.id = param['id']
     );
@@ -33,6 +34,9 @@ export class studentDetail {
 
   }
 
-
+  onNavigate() {
+      // Imperative Routing
+      this.router.navigate(['/']);
+    }
 
 }

@@ -5,8 +5,9 @@ import { Component} from '@angular/core';
   template: `
 
     <div [ngClass]="{myColor:true, myBorder:false}">
-Wellcome to Maharishi University Of Management Home Page!,The home far from your Home!
-
+    <p>
+Wellcome to Maharishi University Of Management Home Page!,The Home far from your Home!
+</p>
     </div>
   `,
   styles:  [`.myBorder { border: 2px solid red; }`,
